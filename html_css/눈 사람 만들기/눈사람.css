@@ -1,0 +1,120 @@
+body{
+    background-color: skyblue;
+    height: 100%;
+    width: 100%;
+}
+.div1{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    left: 25px;
+    
+}
+.div2{
+    width: 80px;
+    height: 10px;
+    background-color: black;
+    position: relative;
+    left: 10px;
+}
+.div3{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 25px;
+    background-color: white;
+    border-radius: 50px;
+}
+.div4{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 15px;
+    background-color: white;
+    border-radius: 50px;
+}
+.div5{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: white;
+    border-radius: 70px;
+}
+.container{
+    position: relative;
+    left: calc(100% - 1000px);
+    top: 500px
+    
+}
+.circle1{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: relative;
+    left: 15px;
+    top: 10px;
+    border-radius: 10px;
+}
+.circle2{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+.half_circle{
+    width: 20px;
+    height: 10px;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    left: 2px;
+    border-radius: 0 0 10px 10px;
+}
+.con2{
+    position: relative;
+    left: 10px;
+}
+.circle3{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+    display: inline-block;
+}
+.circle4{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+.circle5{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+    display: inline-block;
+}
+.con3{
+    position: relative;
+    left: 27px;
+}
+.wood1{
+    float: right;
+    width: 50px;
+    height: 5px;
+    background-color: brown;
+    transform: rotate(165deg);
+}
+.wood2{
+    float: left;
+    width: 50px;
+    height: 5px;
+    background-color: brown;
+    transform: rotate(15deg);
+}   
+.ww{
+    width: 100px;
+    height: 70px;
+}
