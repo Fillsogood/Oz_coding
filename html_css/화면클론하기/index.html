@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면클론하기</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="info.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+        }
+        .flex{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content flex">
+                <div class="header-content_bin">
+
+                </div>
+                <div class="header-content_serch flex">
+                    <span class="icon glass">
+                        <input type="button" value="&#128269;">
+                    </span>
+                    <span class="icon meun">
+                        <input type="button" value="&#9776;">
+                    </span>
+                </div>
+            </div> 
+        </header>
+
+        <main class="main">
+            <section class="info">
+                <div class="logo flex"><h1>GooGle</h1></div>
+                <div class="info-input flex">
+                    <span>
+                        <input type="search" class="info-serch" placeholder="GooGle 검색 또는  URL 입력">
+                    </span>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

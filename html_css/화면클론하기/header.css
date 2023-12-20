@@ -1,0 +1,27 @@
+header.header{
+    position: fixed;
+    top: 1;
+    width: 100%;
+    z-index: 9999;
+}
+.header-content{
+    width: 100%;
+    height: 4rem;
+   
+    padding: 0.35rem 1.5rem;
+    margin: auto;
+
+    justify-content: space-between;
+}
+.header-content_serch{
+    
+    justify-content: center;
+    align-items: center;
+}
+.header-content_serch .icon input{
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
