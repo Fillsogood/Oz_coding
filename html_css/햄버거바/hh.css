@@ -1,0 +1,50 @@
+.c-content{
+    width: 100%;
+    top: 0;
+    height: 4rem;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    background-color: black;
+    justify-content: space-between;
+}
+.c-content_nav{ 
+    
+    color: white;
+}
+.inline-block{
+    width: 4rem;
+    
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+}
+.inline-block1{
+    width: 4rem;
+    background-color: green;
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+}
+
+.c-content_input .icon{
+    display: none;
+    margin-right: 1rem;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 550px){
+    .c-content_input .icon{
+        display: block;
+    }
+    .inline-block,.inline-block1{
+        display: none;
+    }
+    .c-content{
+        background-color: white;
+        justify-content: center;
+    } 
+}
