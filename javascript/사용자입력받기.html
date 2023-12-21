@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자입력받기</title>
+</head>
+<body>
+    <h1 class="name">이름</h1>
+    <p id="animal">좋아하는 동물</p>
+    <p id="fruit">종아하는 과일</p>
+
+    <script>
+        const nameElement = document.querySelector(".name")
+        let name = prompt("당신의 이름은?")
+        nameElement.textContent = name;
+
+        document.querySelector("#animal")
+        .textContent = `좋아하는 동물은 ${prompt("좋아하는 동물은?")}입니다.`
+
+        document.querySelector("#fruit")
+        .textContent = `좋아하는 과일은 ${prompt("좋아하는 과일은?")}입니다.`
+
+    </script>
+</body>
+</html>
