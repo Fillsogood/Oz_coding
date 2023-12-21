@@ -1,0 +1,35 @@
+.notice{
+    width: 100%;
+    height: 100rem;
+    padding: 10rem;
+    margin: auto;
+    background-color: beige;
+}
+.notice_back{
+    width: 20rem;
+    height: 25rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(217, 187, 243);
+}
+.notice_container{
+    justify-content: space-between;
+    flex-wrap: wrap; /*플렉스 아이템이 여러줄로도 배치될 수 있게끔*/
+}
+.notice_content_title{
+    font-size: 1.625rem;
+    margin: 3.75 0 2.5rem;
+    line-height: 1.5;
+}
+.notice_content{
+    
+   text-align: center;
+    position: relative;
+    top: 12rem;
+}
+
+@media screen and (max-width: 768px) {
+    .notice{
+        line-height: 1.3;
+    }
+}

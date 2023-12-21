@@ -1,0 +1,14 @@
+.info{
+    width: 100%;
+    height: 19.6875rem;
+    background-color: #C59879;
+}
+.info_text{
+    text-align: center;
+    justify-content: center;
+}
+h1{
+    margin: 0;
+    position: relative;
+    top: 250px;
+}
