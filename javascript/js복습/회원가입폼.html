@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="회원가입.css">
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+    <main>
+        <fieldset>
+            <label >
+                아이디
+                <input id="text-id" type="text" placeholder="아이디">
+            </label>
+            <br>
+            <label for=pw>비밀번호</label>
+            <input id="pw" type="password" placeholder="비밀번호">
+            <br>
+            <label for=pw-re>비밀번호 확인</label>
+            <input id="pw-re" type="password" placeholder="비밀번호 확인">
+            <input type="submit" id="submit">
+        </fieldset>
+        
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+
+        document.getElementById('submit').addEventListener('click',function(){
+            let text = document.querySelector('#text-id').value;
+            let pw = document.querySelector('#pw').value;
+            let pw_re = document.querySelector('#pw-re').value;
+
+            let all ={"id":" ","password":" ","re_password":" "}
+            all.id=text;
+            all.password=pw;
+            all.re_password=pw_re;
+            console.log(all)
+        })
+
+    </script>
+</body>
+</html>

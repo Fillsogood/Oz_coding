@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js복습과제</title>
+    <style>
+        .whtie,.black{
+            width: 50px;
+        }
+    </style>
+</head>
+<body> 
+    <input type="button" id="whtie" value="whtie">
+    <input type="button" id="black" value="black">
+    <script>
+        document.getElementById('whtie').addEventListener('click',function(){
+            whtie = '#FFFFFF'
+        document.body.style.backgroundColor = whtie;
+        })
+        document.getElementById('black').addEventListener('click', function(){
+            var black = '#000000'
+            document.body.style.backgroundColor = black;
+        });
+    </script>
+</body>
+</html>

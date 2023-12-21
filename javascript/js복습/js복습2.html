@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습2</title>
+    <style>
+        #imglist{
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        img{
+            max-width: 100%;
+            max-width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="imglist">
+            <li><button onclick="changeImage('images/1.png')">이미지1</button></li>
+            <li><button onclick="changeImage('images/js1.png')">이미지2</button></li>
+            <li><button onclick="changeImage('images/거스름돈.png')">이미지3</button></li>
+        </ul>
+        <img id="currentImage" src="images/1.png" alt="1">
+    </div>
+    <script>
+        function changeImage(newImageUrl) {
+            
+            document.querySelector('#currentImage').src = newImageUrl;
+        }
+    </script>
+</body>
+</html>

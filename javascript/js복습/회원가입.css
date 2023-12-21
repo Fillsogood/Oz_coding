@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    margin: 100px;
+}
+fieldset{
+    margin: 10px 200px;
+    border-radius: 10px;
+}
+input{
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    position: relative;
+    top: 5px;
+}
+body{
+    width: 640px;
+    margin: auto; /*너비에서 남는 여백을 동일하게 분배*/
+}
