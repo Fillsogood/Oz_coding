@@ -21,7 +21,7 @@
 function question(n) {
     // 여기에서 코드 작성해주세요!
     let result = 0;
-    for(let num=1;num<n;num++)
+    for(let num=1;num<=n;num++)
     {
         if(num%2==0)
         {
@@ -35,7 +35,7 @@ function question(n) {
 Test(
     question,
     [[10], [35], [59], [74], [49], [93], [10], [26], [69], [56]],
-    [20, 306, 870, 1332, 600, 2162, 20, 156, 1190, 756]
+    [30, 306, 870, 1406, 600, 2162, 30, 182, 1190, 812]
 );
 
 function Test(question, conditions, results) {

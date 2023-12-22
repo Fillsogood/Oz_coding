@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별</title>
+    <style>
+        p{
+            position: relative;
+            left: 100px;
+        }
+        span{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="h1">별 트리 찍기</h1>
+    </div>
+    <script>
+        const container = document.getElementById("container");
+        const h2 = document.createElement("h2")
+        h2.textContent="1번 별"
+        container.appendChild(h2)
+        for (let i = 1; i <= 5; i++) {
+            const p = document.createElement("p");
+            for (let j = 1; j <= i; j++) {
+                const span = document.createElement("span");
+                span.textContent = "* ";
+                p.appendChild(span);
+            }
+            container.appendChild(p);
+        }
+
+        const container2 = document.getElementById("container");
+        const h22 = document.createElement("h2")
+        h22.textContent="2번 별"
+        container.appendChild(h22)
+        for (let i = 1; i <= 5; i++) {
+            const p = document.createElement("p");
+            for (let j = 1; j <= i; j++) {
+                const span = document.createElement("span");
+                span.textContent = "* ";
+                p.appendChild(span);
+            }
+            container.appendChild(p);
+        }
+        for (let i = 4; i >= 1; i--) {
+            const p = document.createElement("p");
+            for (let j = 1; j <= i; j++) {
+                const span = document.createElement("span");
+                span.textContent = "* ";
+                p.appendChild(span);
+            }
+            container.appendChild(p);
+        }
+
+        const container3 = document.getElementById("container");
+        const h3 = document.createElement("h2")
+        h3.textContent="3번 별"
+        container.appendChild(h3)
+
+        for (let i = 1; i <= 5; i++) {
+                const p = document.createElement("p");
+                for (let j = 1; j <= 5 - i; j++) {
+                    const span = document.createElement("span");
+                    span.textContent = "  ";
+                    p.appendChild(span);
+                }
+                for (let k = 1; k <= 2 * i - 1; k++) {
+                    const span = document.createElement("span");
+                    span.textContent = "* ";
+                    p.appendChild(span);
+                }
+                container.appendChild(p);
+            }
+
+            for (let i = 5 - 1; i >= 1; i--) {
+                const p = document.createElement("p");
+                for (let j = 1; j <= 5 - i; j++) {
+                    const span = document.createElement("span");
+                    span.textContent = "  "; 
+                    p.appendChild(span);
+                }
+                for (let k = 1; k <= 2 * i - 1; k++) {
+                    const span = document.createElement("span");
+                    span.textContent = "* ";
+                    p.appendChild(span);
+                }
+                container.appendChild(p);
+            }
+    </script>
+</body>
+</html>

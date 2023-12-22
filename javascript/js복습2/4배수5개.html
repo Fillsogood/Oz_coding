@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4의 배수 5개씩 출력하기</title>
+</head>
+<body>
+    
+    <div id="output">
+        <h1>4의 배수 5개씩 출력하기</h1>
+    </div>
+    <script>
+        const outputContainer = document.getElementById("output");
+
+        for (let i = 0; i < 25; i++) { // 총 25 그룹, 500까지 출력
+            const startNumber = i * 20 + 100; // 각 그룹의 시작값 계산
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = `${startNumber} ${startNumber + 4} ${startNumber + 8} ${startNumber + 12} ${startNumber + 16}`;
+            
+            outputContainer.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>

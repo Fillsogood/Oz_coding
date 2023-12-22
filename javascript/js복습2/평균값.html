@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균값</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="h2">나의 기말고사 점수는 _점, 학점은_!!</h2>
+    </div>
+    <script>
+        let score = parseInt(prompt("중간고사 점수를 입력하세요."))
+        const h2 = document.getElementById("h2")
+        if(score>=90)
+        {
+            h2.textContent=`나의 기말고사 점수는${score}점, 학점은 A!!!`
+        }
+        else if(score>=80 && score<90)
+        {
+            h2.textContent=`나의 기말고사 점수는${score}점, 학점은 B!!!`
+        }
+        else if(score>=70 && score<80)
+        {
+            h2.textContent=`나의 기말고사 점수는${score}점, 학점은 C!!!`
+        }
+        else if(score>=60 && score<70)
+        {
+            h2.textContent=`나의 기말고사 점수는${score}점, 학점은 D!!!`
+        }
+        else
+        {
+            h2.textContent=`나의 기말고사 점수는${score}점, 학점은 F!!!`
+        }   
+
+    </script>
+</body>
+</html>

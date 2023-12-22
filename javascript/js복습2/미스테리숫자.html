@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미스테리의 숫자 맞추기</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 1000px;
+            background-color: gray;
+            text-align: center;
+            position: relative;
+            
+
+        }
+        h1{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Mystery Number 맞추기</h1>
+        <h2>1부터 100 사이의 숫자를 입력하세요!</h3>
+        <input id="id" type="text">
+        <button id="button">뚜둥</button>
+        <h2 id="h2"></h2>
+    </div>
+
+    <script>
+        let a = Math.floor(Math.random() * 100) + 1;
+        let input = document.getElementById("id")
+        const h2 = document.getElementById("h2")
+        document.getElementById("button").addEventListener('click',function(){
+        let result
+        let num =parseInt(input.value)
+ 
+        if(num==a)
+        {
+            result = h2.textContent ="정답입니다!"
+        }
+        else if(num>a)
+        {
+            result = h2.textContent ="힌트 : 숫자가 높아요 조금 더 낯춰주세요!"
+        }
+        else if(num<a)
+        {
+            result = h2.textContent ="힌트 : 숫자가 낮아요 조금 더 높여주세요!"
+        }
+            return result
+        })
+        console.log(a)
+        
+    </script>
+</body>
+</html>
