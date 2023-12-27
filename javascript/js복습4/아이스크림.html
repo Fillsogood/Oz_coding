@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이스크림</title>
+</head>
+<body>
+    <button id="ice-kind">아이스크림 종류 추가</button>
+    <button id="ice-name">아이스크림 이름 출력</button>
+    <button id="ice-object">아이스크림 목록 출력</button>
+
+    <p id="p">입력한 아이스크림 목록:
+    </p>
+    <script>
+        const kind = document.getElementById("ice-kind")
+        const name = document.getElementById("ice-name")
+        const object = document.getElementById("ice-object")
+        const p = document.getElementById("p")
+        let array = []
+        kind.addEventListener("click",()=>{
+            let add = prompt("추가하고싶은 아이스크림의 이름을 입력해주세요")
+            
+            array.push(add)
+        })
+       
+        name.addEventListener("click",()=>{
+            for(let i = 0;i<array.length;i++)
+            {
+                alert(`${array[i]}`)
+            }
+        })
+
+        object.addEventListener("click",()=>{
+            for(let i = 0;i<array.length;i++)
+            {
+              p.textContent+= `${array[i]} `
+            }
+        })
+        
+    </script>
+</body>
+</html>

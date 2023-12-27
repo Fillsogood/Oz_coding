@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보</title>
+</head>
+<body>
+    <h1>가위바위보 게임</h1>
+    <h2>가위,바위,보 중 하나를 입력하세요</h2>
+    <input type="text" id="text">
+    <button id="result">결과 확인</button>
+    <p id="op"></p>
+
+    <script>
+        const text = document.getElementById("text")
+        const result = document.getElementById("result")
+        const p = document.getElementById("op")
+        let choice = ["가위","바위","보"]
+        let computer = choice[Math.floor(Math.random()*2)+0]
+
+        result.addEventListener("click",function(){
+
+            if((text.value==='바위' && computer ==='가위')||
+            (text.value==='가위' && computer === '보')||
+            (text.value==='보' && computer === '바위')){
+                p.textContent = `당신의 선택 ${text.value}/컴퓨터의 선택 ${computer}/결과:이겼습니다. `
+            }
+            else
+            {
+                p.textContent = `당신의 선택 ${text.value}/컴퓨터의 선택 ${computer}/결과:졌습니다. `
+            }
+            })     
+    </script>
+</body>
+</html>

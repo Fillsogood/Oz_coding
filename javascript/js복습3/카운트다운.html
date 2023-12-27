@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트 다운</title>
+</head>
+<body>
+    <p id="now"></p>
+    <p id="nw"></p>
+
+    <script>
+
+        setInterval(function(){
+            const p = document.getElementById("now")
+            const pp =document.getElementById("nw")
+            const now = new Date()
+
+            let year =now.getFullYear()
+            let month = now.getMonth()+1
+            let day = now.getDay()
+            let hour = now.getHours()
+            let min =now.getMinutes()
+            let sec =now.getSeconds()
+
+            p.textContent =`${year}/${month}/${day} ${hour}:${min}:${sec}`
+            pp.textContent=`${2023-year}/${12-month}/${31-day} ${23-hour}:${59-min}:${60-sec}`
+
+        },1000)
+    </script>
+</body>
+</html>

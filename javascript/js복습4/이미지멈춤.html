@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지</title>
+</head>
+<body>
+    <div id="img"></div>
+    <button id="btn">멈춰</button>
+    <script>
+        const imagePaths = [`url('1.png')`,`url('2.png')`,`url('3.png')`];
+        let currentImageIndex =0;
+        const img =document.getElementById("img")
+        const btn =document.getElementById("btn")
+
+       let a= setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+        const nextImage = imagePaths[currentImageIndex];
+        img.style.backgroundImage = nextImage;
+        img.style.widows = '100px'
+        img.style.height ='500px'
+        console.log(nextImage)
+        }, 3000);
+        
+        btn.addEventListener("click",()=>{
+            clearInterval(a)
+            
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치</title>
+</head>
+<body>
+    <p id="time"></p>
+<button id="start">시작</button>
+<button id="stop">중지</button>
+
+<script>
+  let startButton = document.getElementById("start");
+  let stopButton = document.getElementById("stop");
+  let timeElement = document.getElementById("time");
+
+  let stopwatch = {
+    startTime: 0,
+    endTime: 0,
+    isRunning: false,
+    elapsedTime: 0,
+    timer: null,
+
+    start() {
+      if (!this.isRunning) {
+        this.startTime = new Date().getTime();
+        this.isRunning = true;
+        this.timer = setInterval(function(){
+          this.updateTime();
+        }, 1000);
+      }
+    },
+
+    stop() {
+      if (this.isRunning) {
+        clearInterval(this.timer);
+        this.endTime = new Date().getTime();
+        this.isRunning = false;
+        this.elapsedTime = Math.floor((this.endTime - this.startTime) / 1000);
+        this.updateDisplay();
+      }
+    },
+
+    updateTime() {
+      this.elapsedTime = Math.floor((new Date().getTime() - this.startTime) / 1000);
+      this.updateDisplay();
+    },
+
+    updateDisplay() {
+      const hours = Math.floor(this.elapsedTime / 3600);
+      const minutes = Math.floor((this.elapsedTime % 3600) / 60);
+      const seconds = this.elapsedTime % 60;
+
+      timeElement.textContent = `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(seconds)}`;
+    },
+
+    pad(number) {
+      return number < 10 ? "0" + number : number;
+    },
+  };
+
+  startButton.addEventListener("click", function () {
+    stopwatch.start();
+  });
+
+  stopButton.addEventListener("click", function () {
+    stopwatch.stop();
+  });
+</script>
+</body>
+</html>
