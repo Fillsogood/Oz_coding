@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표</title>
+    <style>     
+    </style>
+</head>
+<body>
+    <h1>떡잎 유치원 멀리뛰기 결과</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name">짱구</td>
+                <td class="point">45</td>
+            </tr>
+            <tr>
+                <td class="name">맹구</td>
+                <td class="point">75</td>
+            </tr>
+            <tr>
+                <td class="name">철수</td>
+                <td class="point">95</td>
+            </tr>
+            <tr>
+                <td class="name">훈이</td>
+                <td class="point">50</td>
+            </tr>
+            <tr>
+                <td class="name">유리</td>
+                <td class="point">68</td>
+            </tr>
+            <tr>
+                <td class="name">수지</td>
+                <td class="point">86</td>
+            </tr>
+        </tbody> 
+    </table>
+    <script>
+        const name =document.querySelectorAll(".name")
+        const point =document.querySelectorAll(".point")
+        const nameAll = Array.from(name)
+        const pointAll = Array.from(point)
+        const p = document.createElement("p")
+        document.body.appendChild(p)
+        let result = []
+        for(let i=0;i<nameAll.length;i++){
+            
+           if(pointAll[i].textContent>75){          
+            result.push(nameAll[i].textContent)
+            p.textContent = `75점 넘는 학생:${result}`
+           }      
+        }
+        
+        
+        
+
+    </script>
+</body>
+</html>
