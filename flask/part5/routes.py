@@ -1,0 +1,33 @@
+from flask import render_template,request,redirect,url_for,flash
+from models import User ,users
+from flask_login import login_required, login_user,logout_user
+def configure_route(app):
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+    
+    @app.route('/login',methods=['POST','GET'])
+    def login():
+        if request.method == 'POST':
+            username = request.form['username']
+            password = request.form['password']
+
+            user = User.get(username)
+
+            if user and users[username]['password'] == password:
+                login_user(user)
+
+                return redirect(url_for('index'))
+            else:
+                flash('invalid username or password')
+        return render_template('login.html')
+
+    @app.route('/logout')
+    def logout():
+        logout_user()
+        return redirect(url_for('index'))
+    
+    @app.route('/protected')
+    @login_required
+    def protected():
+        return "<h1>Protected area</h1> <a href='/logout'>Logout</a>"
